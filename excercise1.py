@@ -2,12 +2,13 @@
 Given a paragraph, Return a dict with characters(only alphabets) as keys
 and their count as values
 """
+from collections import defaultdict
 
 def get_character_count(text):
-    dict_of_characters = {}
+    dict_of_characters = defaultdict(int)
     for character in text:
         if character.isalpha()==True:
-            dict_of_characters[character] = dict_of_characters.get(character,0)+1
+            dict_of_characters[character]+=1
     return dict_of_characters
 
 
