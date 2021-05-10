@@ -7,10 +7,9 @@ def get_character_count(text):
     dict_of_characters = {}
     for character in text:
         if character.isalpha()==True:
-            if character in dict_of_characters:
-                dict_of_characters[character] += 1
-            else:
-                dict_of_characters[character]= 1
+            if character not in dict_of_characters:
+                dict_of_characters[character] = 0
+            dict_of_characters[character]+= 1
     return dict_of_characters
 
 
